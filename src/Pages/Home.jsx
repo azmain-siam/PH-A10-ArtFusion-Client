@@ -1,10 +1,8 @@
 import { Helmet } from "react-helmet";
 import Banner from "../Components/Banner";
-import Estates from "../Components/Estates";
-import { useLoaderData } from "react-router-dom";
 import Feature from "../Components/Feature";
+import Crafts from "../Components/Crafts";
 const Home = () => {
-  const estates = useLoaderData();
 
   return (
     <div>
@@ -12,7 +10,7 @@ const Home = () => {
         <title>Home | ArtFusion</title>
       </Helmet>
       <Banner />
-      <Estates estates={estates} />
+      <Crafts />
       <Feature />
     </div>
   );

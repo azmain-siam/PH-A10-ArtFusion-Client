@@ -11,7 +11,6 @@ const ProfileUpdate = () => {
 
   const handleUpdate = (data) => {
     const { fullName, photoURL } = data;
-    console.log(data);
     updateUser(fullName, photoURL).then(() => {
       notifySuccess();
       setReload(!reload);
@@ -27,7 +26,7 @@ const ProfileUpdate = () => {
       <div
         data-aos="fade-right"
         data-aos-duration="1000"
-        className="bg-gradient-to-r from-[#596EC4] to-[#5952B8] capitalize md:col-span-3 py-10 md:p-0 rounded-b-3xl md:rounded-r-[150px] text-white md:flex flex-col justify-center items-center min-h-full"
+        className="bg-gradient-to-r from-[#A06AB4] to-[#E56997] capitalize md:col-span-3 py-10 md:p-0 rounded-b-3xl md:rounded-r-[150px] text-white md:flex flex-col justify-center items-center min-h-full"
       >
         <div className="w-48 h-48 overflow-hidden bg-white rounded-full flex justify-center mx-auto items-center mb-5">
           <img

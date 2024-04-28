@@ -8,6 +8,7 @@ import Register from "../Pages/Register";
 import EstateDetails from "../Pages/EstateDetails";
 import Contact from "../Pages/Contact";
 import PrivateRoute from "./PrivateRoute";
+import AddCraft from "../Pages/AddCraft";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <ProfileUpdate />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/add",
+        element: (
+          <PrivateRoute>
+            <AddCraft />
           </PrivateRoute>
         ),
       },
