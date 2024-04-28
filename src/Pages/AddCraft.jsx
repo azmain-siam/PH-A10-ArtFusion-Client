@@ -37,7 +37,7 @@ const AddCraft = () => {
     <div className="mb-5 mt-10 max-w-7xl w-[95%] md:w-[93%] mx-auto">
       <div className="mb-10 md:mb-14">
         <h3 className="text-2xl text-center md:text-4xl font-bold mb-8">
-          Add Craft Items
+          <span className="text-[#E56997]">Add</span> Craft Items
         </h3>
         <form
           onSubmit={handleSubmit(handleAdd)}
@@ -62,7 +62,7 @@ const AddCraft = () => {
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-semibold text-base">
-                  Emaill
+                  Email
                 </span>
               </label>
               <input
