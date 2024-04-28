@@ -9,6 +9,7 @@ import EstateDetails from "../Pages/EstateDetails";
 import Contact from "../Pages/Contact";
 import PrivateRoute from "./PrivateRoute";
 import AddCraft from "../Pages/AddCraft";
+import MyCrafts from "../Pages/MyCrafts";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <AddCraft />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/my_list",
+        element: (
+          <PrivateRoute>
+            <MyCrafts />
           </PrivateRoute>
         ),
       },

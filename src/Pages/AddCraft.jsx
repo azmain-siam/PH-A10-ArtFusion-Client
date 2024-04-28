@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
+import Swal from "sweetalert2";
 
 const AddCraft = () => {
   const { user } = useAuth();
@@ -14,6 +15,7 @@ const AddCraft = () => {
       photoURL,
       price,
       processing_time,
+      description,
       rating,
     } = data;
     const email = user.email;
@@ -27,9 +29,28 @@ const AddCraft = () => {
       processing_time,
       rating,
       email,
+      description,
     };
 
-    console.log(info);
+    // send info to the server
+    fetch("http://localhost:5000/items", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(info),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            icon: "success",
+            title: "Item Added Successfully!",
+          });
+        }
+      });
+
     reset();
   };
 
@@ -207,6 +228,20 @@ const AddCraft = () => {
                 <option>No</option>
               </select>
             </div>
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text font-semibold text-base">
+                Description
+              </span>
+            </label>
+            <textarea
+              rows="3"
+              {...register("description")}
+              placeholder="Write a Description..."
+              required
+              className="textarea focus:outline-none focus:border bg-[#EEEDEE] text-base"
+            ></textarea>
           </div>
 
           <div className="form-control mt-6">
