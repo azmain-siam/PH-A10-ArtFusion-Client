@@ -1,0 +1,195 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Spacious Single-Family Home",
+    "segment_name": "Single-family homes",
+    "description": "A beautiful single-family home with ample space for a growing family.",
+    "description_2": "This spacious single-family home is the epitome of modern luxury living. With its open floor plan, high ceilings, and abundant natural light, every corner of this home exudes warmth and elegance. Step outside to the meticulously landscaped backyard oasis, perfect for entertaining or simply unwinding after a long day.",
+    "price": "$500,000",
+    "status": "Sale",
+    "area": "2500 sq ft",
+    "location": "Suburban neighborhood",
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "facilities": [
+      "Backyard garden",
+      "Assisted living options",
+      "Recreational activities"
+    ],
+    "highlight_features": [
+      "Open floor plan",
+      "High ceilings",
+      "Abundant natural light",
+      "Landscaped backyard oasis"
+    ],
+    "image": "https://i.ibb.co/H2xF04J/Spacious-Single-Family-Home.jpg"
+  },
+  {
+    "id": 2,
+    "estate_title": "Luxurious City Apartment",
+    "segment_name": "Apartments",
+    "description": "An upscale apartment offering stunning views and premium amenities.",
+    "description_2": "Indulge in luxury living in this upscale city apartment. From the breathtaking views of the skyline to the state-of-the-art amenities, every aspect of this property is designed to elevate your urban lifestyle.",
+    "price": "$2,500/month",
+    "status": "Rent",
+    "area": "1200 sq ft",
+    "location": "Downtown district",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "facilities": ["Fitness center", "Swimming pool"],
+    "highlight_features": [
+      "Breathtaking skyline views",
+      "State-of-the-art amenities",
+      "Convenient downtown location"
+    ],
+    "image": "https://i.ibb.co/7WM4DTt/living-room-8260337-1920.jpg"
+  },
+  {
+    "id": 3,
+    "estate_title": "Modern Townhouse",
+    "segment_name": "Townhouses",
+    "description": "A contemporary townhouse featuring sleek design and urban convenience.",
+    "description_2": "Experience urban living at its finest in this modern townhouse. With its sleek design, high-end finishes, and rooftop terrace offering stunning city views, this property is perfect for those seeking a sophisticated lifestyle in the heart of the city.",
+    "price": "$350,000",
+    "status": "Sale",
+    "area": "1800 sq ft",
+    "location": "City center",
+    "bedrooms": 3,
+    "bathrooms": 2.5,
+    "facilities": [
+      "Roof terrace",
+      "Assisted living options",
+      "Recreational activities"
+    ],
+    "highlight_features": [
+      "Sleek design",
+      "High-end finishes",
+      "Rooftop terrace with city views"
+    ],
+    "image": "https://i.ibb.co/yWg5GJ5/Modern-Townhouse.jpg"
+  },
+  {
+    "id": 4,
+    "estate_title": "Student Housing Complex",
+    "segment_name": "Student housing",
+    "description": "Purpose-built student accommodation with modern facilities and convenient location.",
+    "description_2": "Discover a vibrant community and a comfortable living environment in this purpose-built student housing complex. Offering modern amenities and a convenient location near the university campus, this property is the perfect place for students to thrive.",
+    "price": "$800/month",
+    "status": "Rent",
+    "area": "500 sq ft (per room)",
+    "location": "Near university campus",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "facilities": ["Shared kitchen", "Study areas"],
+    "highlight_features": [
+      "Vibrant community atmosphere",
+      "Modern amenities",
+      "Convenient location"
+    ],
+    "image": "https://i.ibb.co/KbcYh8v/ryan-jacobson-c-XUOQWd-RV4-I-unsplash.jpg"
+  },
+  {
+    "id": 5,
+    "estate_title": "Senior Living Community",
+    "segment_name": "Senior living communities",
+    "description": "A vibrant community designed for active seniors, offering various social activities.",
+    "description_2": "Experience a fulfilling retirement lifestyle in this vibrant senior living community. With a wide range of amenities, social activities, and personalized care options, residents can enjoy their golden years to the fullest in a supportive and enriching environment.",
+    "price": "$3,000/month",
+    "status": "Rent",
+    "area": "Varies",
+    "location": "Retirement village",
+    "bedrooms": "Varies",
+    "bathrooms": "Varies",
+    "facilities": [
+      "Assisted living options",
+      "Recreational activities",
+      "On-site dining"
+    ],
+    "highlight_features": [
+      "Wide range of amenities",
+      "Social activities",
+      "Personalized care options"
+    ],
+    "image": "https://i.ibb.co/6BFJx5q/Senior-Living-Community.webp"
+  },
+  {
+    "id": 6,
+    "estate_title": "Scenic Vacation Rental",
+    "segment_name": "Vacation Rentals",
+    "description": "Escape to a serene vacation Rental surrounded by nature's beauty.",
+    "description_2": "Embrace tranquility and relaxation in this scenic vacation Rental. Nestled amidst breathtaking natural landscapes, this property offers a peaceful retreat from the hustle and bustle of everyday life, allowing you to reconnect with nature and recharge your soul.",
+    "price": "$490,000",
+    "status": "Sale",
+    "area": "1000 sq ft",
+    "location": "Coastal town",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "facilities": ["Private patio", "Fully equipped kitchen"],
+    "highlight_features": [
+      "Breathtaking natural landscapes",
+      "Peaceful retreat",
+      "Fully equipped kitchen"
+    ],
+    "image": "https://i.ibb.co/6YHPS6q/Scenic-Vacation-Rental.jpg"
+  },
+  {
+    "id": 7,
+    "estate_title": "Charming Cottage Retreat",
+    "segment_name": "Vacation Rentals",
+    "description": "Experience a cozy cottage retreat nestled in the countryside.",
+    "description_2": "Step into a world of charm and coziness in this delightful cottage retreat. Surrounded by picturesque countryside views, this property offers a serene escape where you can unwind, relax, and create unforgettable memories with loved ones.",
+    "price": "$430,000",
+    "status": "Sale",
+    "area": "800 sq ft",
+    "location": "Rural setting",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "facilities": ["Fireplace", "Garden area", "Outdoor seating"],
+    "highlight_features": [
+      "Charming countryside views",
+      "Cozy fireplace",
+      "Outdoor seating area"
+    ],
+    "image": "https://i.ibb.co/yPc0zSB/Charming-Cottage-Retreat.jpg"
+  },
+  {
+    "id": 8,
+    "estate_title": "Seaside Villa",
+    "segment_name": "Vacation Rentals",
+    "description": "Indulge in luxury at a stunning seaside villa with breathtaking views.",
+    "description_2": "Experience the ultimate beachfront luxury in this exquisite seaside villa. With its spacious interiors, infinity pool, and private beach access, this property offers a perfect blend of elegance and relaxation. Whether you're lounging on the sun-soaked deck or taking a dip in the crystal-clear waters, every moment here is pure bliss.",
+    "price": "$500/night",
+    "status": "Rent",
+    "area": "3000 sq ft",
+    "location": "Beachfront",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "facilities": ["Infinity pool", "Private beach access", "Sunset deck"],
+    "highlight_features": [
+      "Beachfront location",
+      "Infinity pool with ocean views",
+      "Private beach access"
+    ],
+    "image": "https://i.ibb.co/myc0S9f/Seaside-Villa.jpg"
+  },
+  {
+    "id": 9,
+    "estate_title": "Mountain Chalet",
+    "segment_name": "Vacation Rentals",
+    "description": "Escape to a cozy mountain chalet surrounded by majestic peaks.",
+    "description_2": "Unwind amidst the breathtaking beauty of the mountains in this charming mountain chalet. With its rustic yet modern interiors, cozy fireplace, and panoramic views, this property offers the perfect retreat for nature lovers and adventure seekers alike.",
+    "price": "$570,000",
+    "status": "Sale",
+    "area": "1200 sq ft",
+    "location": "Alpine village",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "facilities": ["Ski-in/ski-out access", "Hot tub", "Balcony with views"],
+    "highlight_features": [
+      "Rustic yet modern interiors",
+      "Cozy fireplace",
+      "Panoramic mountain views"
+    ],
+    "image": "https://i.ibb.co/FD6bWWT/Mountain-Chalet.jpg"
+  }
+]
