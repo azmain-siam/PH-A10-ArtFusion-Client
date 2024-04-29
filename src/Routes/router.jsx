@@ -10,6 +10,8 @@ import Contact from "../Pages/Contact";
 import PrivateRoute from "./PrivateRoute";
 import AddCraft from "../Pages/AddCraft";
 import MyCrafts from "../Pages/MyCrafts";
+import Update from "../Pages/Update";
+import AllCrafts from "../Pages/AllCrafts";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,10 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "/all",
+        element: <AllCrafts></AllCrafts>,
+      },
+      {
         path: "/add",
         element: (
           <PrivateRoute>
@@ -54,6 +60,16 @@ const router = createBrowserRouter([
             <MyCrafts />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/items/update/:id",
+        element: (
+          <PrivateRoute>
+            <Update />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/items/${params.id}`),
       },
       {
         path: "/login",
