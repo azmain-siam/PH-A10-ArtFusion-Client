@@ -1,8 +1,29 @@
 import { Helmet } from "react-helmet";
 import { Link, useLoaderData } from "react-router-dom";
+import "primereact/resources/themes/lara-light-indigo/theme.css";
+import "primereact/resources/primereact.min.css";
+import { useState } from "react";
 
 const AllCrafts = () => {
   const items = useLoaderData();
+
+  const [selectedFilter, setSelectedFilter] = useState("");
+
+  const [filterData, setFilterData] = useState(items);
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setSelectedFilter(value);
+    if (value == "All") {
+      setFilterData(items);
+    } else if (value === "Customizable") {
+      const newItems = items.filter((item) => item.customization == "Yes");
+      setFilterData(newItems);
+    } else if (value === "Not Customizable") {
+      const newItems = items.filter((item) => item.customization == "No");
+      setFilterData(newItems);
+    }
+  };
 
   return (
     <div className="my-5 max-w-7xl w-[95%] md:w-[93%] mx-auto mt-10 md:mt-14">
@@ -14,37 +35,19 @@ const AllCrafts = () => {
           All Art & Craft List
         </h3>
       </div>
-      {/* <div className="flex flex-col border rounded-xl border-[#cacaca]">
-        <div className="md:grid hidden bg-[#f0f0f0] rounded-t-xl grid-cols-10 p-5 font-semibold">
-          <p className="col-span-1">Image</p>
-          <p className="col-span-4">Name</p>
-          <p className="col-span-2">Category</p>
-          <p className="col-span-2">Price</p>
-          <p className="col-span-1">Action</p>
-        </div>
-        {items.map((item) => (
-          <div
-            key={item._id}
-            className="grid grid-cols-5 lg:grid-cols-10 text-sm lg:text-base px-5 py-3 font-medium items-center border-t border-[#cacaca] overflow-auto"
-          >
-            <div className="col-span-1">
-              <img className="w-12" src={item.photoURL} />
-            </div>
-            <p className="col-span-3 lg:col-span-4">{item.itemName}</p>
-            <p className="col-span-1 lg:col-span-2">{item.category}</p>
-            <p className="col-span-2">${item.price}</p>
-            <Link className="col-span-1">
-              <button className="btn bg-[#E56997] border-[#E56997] hover:border-[#28282B] hover:text-[#28282B] text-white uppercase transition-all hover:bg-white duration-300 hover:scale-105">
-                details
-              </button>
-            </Link>
-          </div>
-        ))}
-      </div> */}
-
+      <div className="text-center mb-5">
+        <select
+          className="select select-bordered  w-full max-w-xs"
+          value={selectedFilter}
+          onChange={handleChange}
+        >
+          <option>All</option>
+          <option>Customizable</option>
+          <option>Not Customizable</option>
+        </select>
+      </div>
       <div className="overflow-x-auto border border-[#e4e4e4] rounded-lg">
         <table className="table">
-          {/* head */}
           <thead className="text-sm text-[#e95289]">
             <tr className="border-[#e4e4e4]">
               <th>Image</th>
@@ -55,7 +58,7 @@ const AllCrafts = () => {
             </tr>
           </thead>
           <tbody>
-            {items.map((item) => (
+            {filterData.map((item) => (
               <tr className="font-semibold border-[#e4e4e4]" key={item._id}>
                 <td>
                   <img className="w-12" src={item.photoURL} alt="" />
