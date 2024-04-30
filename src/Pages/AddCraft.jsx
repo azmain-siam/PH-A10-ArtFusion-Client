@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const AddCraft = () => {
   const { user } = useAuth();
@@ -56,6 +57,9 @@ const AddCraft = () => {
 
   return (
     <div className="mb-5 mt-10 max-w-7xl w-[95%] md:w-[93%] mx-auto">
+      <Helmet>
+        <title>Add Craft | ArtFusion</title>
+      </Helmet>
       <div className="mb-10 md:mb-14">
         <h3 className="text-2xl text-center md:text-4xl font-bold mb-8">
           <span className="text-[#E56997]">Add</span> Craft Items

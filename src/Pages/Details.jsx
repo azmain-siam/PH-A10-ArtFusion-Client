@@ -20,7 +20,7 @@ const Details = () => {
   return (
     <div className="max-w-7xl w-[93%] md:w-[93%] mx-auto my-8 flex flex-col lg:flex-row gap-6 items-center">
       <Helmet>
-        <title>Product Details | ArtFusion</title>
+        <title>Details | ArtFusion</title>
       </Helmet>
       <div className="w-full lg:w-[600px] h-[240px] md:h-[400px] lg:h-[550px] rounded-xl overflow-hidden cursor-pointer">
         <img

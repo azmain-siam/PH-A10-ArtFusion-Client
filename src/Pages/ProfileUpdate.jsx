@@ -21,7 +21,7 @@ const ProfileUpdate = () => {
   return (
     <div className="grid md:grid-cols-6 shadow-4xl min-h-[450px] my-10 rounded-3xl overflow-hidden w-[95%] lg:w-3/4 mx-auto">
       <Helmet>
-        <title>ArtFusion | Profile</title>
+        <title>Profile | ArtFusion</title>
       </Helmet>
       <div
         data-aos="fade-right"

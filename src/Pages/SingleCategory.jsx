@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { FaStar } from "react-icons/fa";
 import { IoTimerOutline } from "react-icons/io5";
 import { Link, useLoaderData, useParams } from "react-router-dom";
@@ -7,6 +8,9 @@ const SingleCategory = () => {
   const category = useParams();
   return (
     <div className="max-w-7xl w-[93%] md:w-[93%] mx-auto mb-10">
+      <Helmet>
+        <title>{category} | ArtFusion</title>
+      </Helmet>
       <div className="text-center my-10 md:my-10">
         <h3 className="text-2xl md:text-4xl font-bold mb-3">
           {category.category}s
