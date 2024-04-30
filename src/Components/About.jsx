@@ -7,7 +7,7 @@ import profile3 from "../assets/pic (3).jpg";
 
 const About = () => {
   return (
-    <div className="poppins text-center mt-3">
+    <div data-aos="fade-up" className="text-center mt-20">
       <div className="mt-10 md:mt-14">
         <h2 className="text-2xl md:text-4xl font-semibold mb-4">
           Meet the Team

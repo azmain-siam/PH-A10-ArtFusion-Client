@@ -42,7 +42,7 @@ const Update = () => {
     };
 
     // send info to the server
-    fetch(`http://localhost:5000/items/${item._id}`, {
+    fetch(`https://a10-art-fusion-server.vercel.app/items/${item._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

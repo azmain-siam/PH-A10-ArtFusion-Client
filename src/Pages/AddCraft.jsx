@@ -33,7 +33,7 @@ const AddCraft = () => {
     };
 
     // send info to the server
-    fetch("http://localhost:5000/items", {
+    fetch("https://a10-art-fusion-server.vercel.app/items", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -12,7 +12,7 @@ const Home = () => {
       <Helmet>
         <title>Home | ArtFusion</title>
       </Helmet>
-      <Banner />
+      <Banner/>
       <Crafts />
       <ArtAndCraft categories={categories} />
       <Feature />

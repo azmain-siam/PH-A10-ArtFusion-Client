@@ -7,7 +7,7 @@ const Feature = () => {
   return (
     <div
       data-aos="fade-up"
-      className="max-w-7xl w-[93%] md:w-[93%] mx-auto my-10 md:my-14"
+      className="max-w-7xl w-[93%] md:w-[93%] mx-auto mt-20"
     >
       <h3 className="text-2xl md:text-4xl text-center font-bold mb-3">
         See how ArtFusion can help

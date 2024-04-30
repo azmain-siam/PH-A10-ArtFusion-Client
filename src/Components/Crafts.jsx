@@ -7,7 +7,7 @@ const Crafts = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/items")
+    fetch("https://a10-art-fusion-server.vercel.app/items")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
@@ -15,7 +15,10 @@ const Crafts = () => {
 
   const displayedItems = items.slice(0, 8);
   return (
-    <div className="my-5 max-w-7xl w-[95%] md:w-[93%] mx-auto mt-10 md:mt-14">
+    <div
+      data-aos="fade-up"
+      className="my-5 max-w-7xl w-[95%] md:w-[93%] mx-auto mt-10 md:mt-14"
+    >
       <div className="text-center mb-10 md:mb-14">
         <h3 className="text-2xl md:text-4xl font-bold mb-3">Craft Items</h3>
         <div className="w-32 md:w-40 h-[3px] bg-[#E56997] mx-auto mb-5"></div>
@@ -28,10 +31,7 @@ const Crafts = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
         {displayedItems.map((item) => (
           <div key={item._id}>
-            <div
-              data-aos="fade-up"
-              className="group/item cursor-default card rounded-xl w-full max-w-[420px] mx-auto h-full border shadow-md hover:shadow-xl duration-300"
-            >
+            <div className="group/item cursor-default card rounded-xl w-full max-w-[420px] mx-auto h-full border shadow-md hover:shadow-xl duration-300">
               <figure className="relative">
                 <div className="w-full h-[200px] md:h-[230px] overflow-hidden">
                   <img
@@ -69,9 +69,7 @@ const Crafts = () => {
                   <h3 className="font-semibold">
                     Customization: {item.customization}
                   </h3>
-                  <h3 className="font-bold text-4xl">
-                   ${item.price}.00
-                  </h3>
+                  <h3 className="font-bold text-4xl">${item.price}.00</h3>
                 </div>
                 <hr className="my-1" />
                 <div className="mt-1">

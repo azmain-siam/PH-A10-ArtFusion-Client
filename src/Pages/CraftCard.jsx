@@ -29,7 +29,7 @@ const CraftCard = ({ item, refresh, setRefresh }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/items/${_id}`, {
+        fetch(`https://a10-art-fusion-server.vercel.app/items/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -69,9 +69,7 @@ const CraftCard = ({ item, refresh, setRefresh }) => {
           <div className="text-[15px] flex gap-1 justify-between flex-wrap">
             <div className="flex gap-1 items-center">
               <IoCartOutline size={19} color="#0047AB" />
-              <p className="font-medium mt-[2px]">
-                {stockStatus}
-              </p>
+              <p className="font-medium mt-[2px]">{stockStatus}</p>
             </div>
             <div className="flex gap-1 items-center">
               <FaStar size={19} color="#ffa534" />

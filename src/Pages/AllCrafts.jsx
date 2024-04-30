@@ -2,28 +2,9 @@ import { Helmet } from "react-helmet";
 import { Link, useLoaderData } from "react-router-dom";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
-import { useState } from "react";
 
 const AllCrafts = () => {
   const items = useLoaderData();
-
-  const [selectedFilter, setSelectedFilter] = useState("");
-
-  const [filterData, setFilterData] = useState(items);
-
-  const handleChange = (e) => {
-    const value = e.target.value;
-    setSelectedFilter(value);
-    if (value == "All") {
-      setFilterData(items);
-    } else if (value === "Customizable") {
-      const newItems = items.filter((item) => item.customization == "Yes");
-      setFilterData(newItems);
-    } else if (value === "Not Customizable") {
-      const newItems = items.filter((item) => item.customization == "No");
-      setFilterData(newItems);
-    }
-  };
 
   return (
     <div className="my-5 max-w-7xl w-[95%] md:w-[93%] mx-auto mt-10 md:mt-14">
@@ -35,39 +16,29 @@ const AllCrafts = () => {
           All Art & Craft List
         </h3>
       </div>
-      <div className="text-center mb-5">
-        <select
-          className="select select-bordered  w-full max-w-xs"
-          value={selectedFilter}
-          onChange={handleChange}
-        >
-          <option>All</option>
-          <option>Customizable</option>
-          <option>Not Customizable</option>
-        </select>
-      </div>
+      <div className="text-center mb-5"></div>
       <div className="overflow-x-auto border border-[#e4e4e4] rounded-lg">
         <table className="table">
           <thead className="text-sm text-[#e95289]">
             <tr className="border-[#e4e4e4]">
               <th>Image</th>
-              <th>Name</th>
+              <th>Item Name</th>
+              <th>User Email</th>
               <th>Category</th>
               <th>Price</th>
-              <th>Customization</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            {filterData.map((item) => (
+            {items.map((item) => (
               <tr className="font-semibold border-[#e4e4e4]" key={item._id}>
                 <td>
-                  <img className="w-16 rounded-md ml-2" src={item.photoURL} alt="" />
+                  <img className="w-16 rounded-md ml-2" src={item.photoURL} />
                 </td>
                 <td>{item.itemName}</td>
+                <td>{item.email}</td>
                 <td>{item.category}</td>
                 <td>${item.price}</td>
-                <td>{item.customization}</td>
                 <td>
                   <Link
                     to={`/items/details/${item._id}`}

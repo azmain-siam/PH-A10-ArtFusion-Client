@@ -29,7 +29,9 @@ const router = createBrowserRouter([
         path: "/categories/:category",
         element: <SingleCategory />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/categories/${params.category}`),
+          fetch(
+            `https://a10-art-fusion-server.vercel.app/categories/${params.category}`
+          ),
       },
       {
         path: "/profile-update",
@@ -42,7 +44,7 @@ const router = createBrowserRouter([
       {
         path: "/all",
         element: <AllCrafts></AllCrafts>,
-        loader: () => fetch("http://localhost:5000/items"),
+        loader: () => fetch("https://a10-art-fusion-server.vercel.app/items"),
       },
       {
         path: "/add",
@@ -68,7 +70,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/items/${params.id}`),
+          fetch(`https://a10-art-fusion-server.vercel.app/items/${params.id}`),
       },
       {
         path: "/items/details/:id",
@@ -78,7 +80,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/items/${params.id}`),
+          fetch(`https://a10-art-fusion-server.vercel.app/items/${params.id}`),
       },
       {
         path: "/login",

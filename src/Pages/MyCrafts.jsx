@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
 import CraftCard from "./CraftCard";
 import { Helmet } from "react-helmet";
+import { Bars } from "react-loader-spinner";
 
 const MyCrafts = () => {
   const { user } = useAuth();
+  const [loading, setLoading] = useState(true);
 
   const [refresh, setRefresh] = useState(false);
 
@@ -15,11 +17,12 @@ const MyCrafts = () => {
   const [filterData, setFilterData] = useState(items);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myList/${user.email}`)
+    fetch(`https://a10-art-fusion-server.vercel.app/myList/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setItems(data);
         setFilterData(data);
+        setLoading(false);
       });
   }, [user, refresh]);
 
@@ -38,10 +41,25 @@ const MyCrafts = () => {
   };
 
   return (
-    <div className="my-5 max-w-7xl w-[95%] md:w-[93%] mx-auto mt-9">
+    <div className="my-5 max-w-7xl w-[95%] md:w-[93%] mx-auto mt-9 min-h-full">
       <Helmet>
         <title>My Crafts | ArtFusion</title>
       </Helmet>
+      <div className="flex justify-center items-center h-full">
+        {loading ? (
+          <Bars
+            height="80"
+            width="80"
+            color="#4fa94d"
+            ariaLabel="bars-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          />
+        ) : (
+          ""
+        )}
+      </div>
       <div className="text-center mb-7">
         <h3 className="text-2xl md:text-4xl font-bold mb-3">
           My Art & Craft List
