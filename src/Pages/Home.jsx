@@ -3,7 +3,9 @@ import Banner from "../Components/Banner";
 import Feature from "../Components/Feature";
 import Crafts from "../Components/Crafts";
 import ArtAndCraft from "../Components/ArtAndCraft";
+import { useLoaderData } from "react-router-dom";
 const Home = () => {
+  const categories = useLoaderData();
   return (
     <div>
       <Helmet>
@@ -11,7 +13,7 @@ const Home = () => {
       </Helmet>
       <Banner />
       <Crafts />
-      <ArtAndCraft />
+      <ArtAndCraft categories={categories} />
       <Feature />
     </div>
   );

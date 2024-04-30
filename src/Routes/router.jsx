@@ -5,7 +5,6 @@ import Home from "../Pages/Home";
 import ProfileUpdate from "../Pages/ProfileUpdate";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
-import EstateDetails from "../Pages/EstateDetails";
 import Contact from "../Pages/Contact";
 import PrivateRoute from "./PrivateRoute";
 import AddCraft from "../Pages/AddCraft";
@@ -13,6 +12,7 @@ import MyCrafts from "../Pages/MyCrafts";
 import Update from "../Pages/Update";
 import AllCrafts from "../Pages/AllCrafts";
 import Details from "../Pages/Details";
+import SingleCategory from "../Pages/SingleCategory";
 
 const router = createBrowserRouter([
   {
@@ -23,16 +23,13 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("/Data/Data.json"),
+        loader: () => fetch("/categories.json"),
       },
       {
-        path: "/estates/:id",
-        element: (
-          <PrivateRoute>
-            <EstateDetails />
-          </PrivateRoute>
-        ),
-        loader: () => fetch("/Data/Data.json"),
+        path: "/categories/:category",
+        element: <SingleCategory />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/categories/${params.category}`),
       },
       {
         path: "/profile-update",
