@@ -44,7 +44,6 @@ const CraftCard = ({ item }) => {
       }
     });
   };
-
   return (
     <div>
       <div
@@ -58,57 +57,29 @@ const CraftCard = ({ item }) => {
               src={photoURL}
             />
           </div>
-          {/* <div
-            className={`absolute bottom-0 right-0 z-10 text-white px-4 py-1 ${
-              status === "Sale" ? "bg-[#5EA51C]" : "bg-[#F95C64]"
-            } font-medium`}
-          >
-            <span>
-              {status}: {price}
-            </span>
-          </div> */}
         </figure>
         <div className="card-body p-4">
           <h2 className="card-title font-bold capitalize">{itemName}</h2>
 
           <p className="font-medium text-[#585858]">{description}</p>
           <h3 className="font-semibold">Facilities:</h3>
-          {/* <ul className="text-sm text-[#585858] list-disc">
-            {facilities.map((facility) => (
-              <li className="ml-7" key={facility}>
-                {facility}
-              </li>
-            ))}
-          </ul> */}
+
           <hr className="my-1" />
-          <div className="text-sm flex flex-wrap justify-between  items-center text-[#585858]">
-            {/* <div className="flex gap-1 items-center">
-              <FaBed />
-              <p className="font-medium">{bedrooms} Bedrooms</p>
-            </div>
-            <div className="flex gap-1 items-center">
-              <FaBath />
-              <p className="font-medium">{bathrooms} Bathrooms</p>
-            </div>
-            <div className="flex gap-1 items-center">
-              <FaRulerCombined />
-              <p className="font-medium">{area}</p>
-            </div> */}
-          </div>
-          <div>
-            <Link to={`/items/update/${_id}`}>
-              <button className="btn w-full mt-2 bg-[#E56997] border-[#E56997] hover:border-[#28282B] hover:text-[#28282B] text-white uppercase transition-all hover:bg-white duration-300 hover:scale-105">
+
+          <div className="flex gap-2 mt-1">
+            <Link to={`/items/update/${_id}`} className="flex-1">
+              <button className="btn w-full bg-[#E56997] border-[#E56997] hover:border-[#28282B] hover:text-[#28282B] text-white uppercase transition-all hover:bg-white duration-300 hover:scale-105">
                 edit
               </button>
             </Link>
             <button
               onClick={() => handleDelete(_id)}
-              className="btn w-full mt-2 bg-[#E56997] border-[#E56997] hover:border-[#28282B] hover:text-[#28282B] text-white uppercase transition-all hover:bg-white duration-300 hover:scale-105"
+              className="btn flex-1 bg-[#E56997] border-[#E56997] hover:border-[#28282B] hover:text-[#28282B] text-white uppercase transition-all hover:bg-white duration-300 hover:scale-105"
             >
               delete
             </button>
-            <Link>
-              <button className="btn w-full mt-2 bg-[#E56997] border-[#E56997] hover:border-[#28282B] hover:text-[#28282B] text-white uppercase transition-all hover:bg-white duration-300 hover:scale-105">
+            <Link to={`/items/details/${_id}`}>
+              <button className="btn min-w-full bg-[#E56997] border-[#E56997] hover:border-[#28282B] hover:text-[#28282B] text-white uppercase transition-all hover:bg-white duration-300 hover:scale-105">
                 show details
               </button>
             </Link>

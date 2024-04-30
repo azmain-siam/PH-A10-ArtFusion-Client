@@ -12,6 +12,7 @@ import AddCraft from "../Pages/AddCraft";
 import MyCrafts from "../Pages/MyCrafts";
 import Update from "../Pages/Update";
 import AllCrafts from "../Pages/AllCrafts";
+import Details from "../Pages/Details";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,7 @@ const router = createBrowserRouter([
       {
         path: "/all",
         element: <AllCrafts></AllCrafts>,
+        loader: () => fetch("http://localhost:5000/items"),
       },
       {
         path: "/add",
@@ -66,6 +68,16 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Update />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/items/${params.id}`),
+      },
+      {
+        path: "/items/details/:id",
+        element: (
+          <PrivateRoute>
+            <Details />
           </PrivateRoute>
         ),
         loader: ({ params }) =>
