@@ -189,7 +189,7 @@ const AddCraft = () => {
                 </span>
               </label>
               <input
-                type="number"
+                type="text"
                 {...register("rating")}
                 placeholder="Rating"
                 className="input focus:outline-none focus:border bg-[#EEEDEE]"

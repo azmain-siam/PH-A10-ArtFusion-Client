@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const CraftCard = ({ item }) => {
+const CraftCard = ({ item, refresh, setRefresh }) => {
   const {
     itemName,
     stockStatus,
@@ -32,7 +32,6 @@ const CraftCard = ({ item }) => {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire({
                 title: "Deleted!",
@@ -41,6 +40,7 @@ const CraftCard = ({ item }) => {
               });
             }
           });
+        setRefresh(!refresh);
       }
     });
   };
@@ -62,7 +62,9 @@ const CraftCard = ({ item }) => {
           <h2 className="card-title font-bold capitalize">{itemName}</h2>
 
           <p className="font-medium text-[#585858]">{description}</p>
-          <h3 className="font-semibold">Facilities:</h3>
+          <h3 className="font-semibold mt-3 text-lg">
+            Customization: {customization}
+          </h3>
 
           <hr className="my-1" />
 

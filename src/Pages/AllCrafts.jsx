@@ -54,6 +54,7 @@ const AllCrafts = () => {
               <th>Name</th>
               <th>Category</th>
               <th>Price</th>
+              <th>Customization</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -61,11 +62,12 @@ const AllCrafts = () => {
             {filterData.map((item) => (
               <tr className="font-semibold border-[#e4e4e4]" key={item._id}>
                 <td>
-                  <img className="w-12" src={item.photoURL} alt="" />
+                  <img className="w-16 rounded-md ml-2" src={item.photoURL} alt="" />
                 </td>
                 <td>{item.itemName}</td>
                 <td>{item.category}</td>
                 <td>${item.price}</td>
+                <td>{item.customization}</td>
                 <td>
                   <Link
                     to={`/items/details/${item._id}`}
