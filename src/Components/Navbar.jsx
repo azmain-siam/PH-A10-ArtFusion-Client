@@ -27,7 +27,7 @@ const Navbar = () => {
   // To toggle the theme
   const handleToggle = (e) => {
     if (e.target.checked) {
-      setTheme("synthwave");
+      setTheme("dark");
     } else {
       setTheme("light");
     }
@@ -174,7 +174,7 @@ const Navbar = () => {
             <input
               onChange={handleToggle}
               type="checkbox"
-              checked={theme === "synthwave"}
+              checked={theme === "dark"}
               className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
             />
             <svg

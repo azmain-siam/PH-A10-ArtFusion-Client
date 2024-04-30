@@ -9,9 +9,7 @@ const About = () => {
   return (
     <div data-aos="fade-up" className="text-center mt-20">
       <div className="mt-10 md:mt-14">
-        <h2 className="text-2xl md:text-4xl font-semibold mb-4">
-          Meet the Team
-        </h2>
+        <h2 className="text-2xl md:text-4xl font-bold mb-4">Meet the Team</h2>
         <div className="w-40 md:w-48 h-[3px] bg-[#E56997] mx-auto mb-5"></div>
         <p className="md:text-lg w-[80%] mx-auto text-[#131313c9] ">
           We're a diverse team of avid readers, writers, and book lovers who are
