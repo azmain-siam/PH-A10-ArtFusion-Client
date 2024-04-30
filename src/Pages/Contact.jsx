@@ -1,5 +1,3 @@
-import { Helmet } from "react-helmet";
-
 const Contact = () => {
   const handleMessege = (e) => {
     e.preventDefault();
@@ -7,13 +5,10 @@ const Contact = () => {
   };
   return (
     <div className="grid md:grid-cols-6 shadow-4xl min-h-[450px] my-10 rounded-3xl overflow-hidden w-[95%] lg:w-3/4 mx-auto">
-      <Helmet>
-        <title>Contact | ArtFusion</title>
-      </Helmet>
       <div
         data-aos="fade-right"
         data-aos-duration="1000"
-        className="bg-gradient-to-r from-[#596EC4] to-[#5952B8] capitalize md:col-span-3 py-10 px-4 rounded-b-3xl md:rounded-r-[150px] text-white md:flex flex-col justify-center min-h-full"
+        className="bg-gradient-to-r from-[#A06AB4] to-[#E56997] capitalize md:col-span-3 py-10 px-4 rounded-b-3xl md:rounded-r-[150px] text-white md:flex flex-col justify-center min-h-full"
       >
         <div className="text-center">
           <h3 className="text-4xl font-bold mb-3">Contact Us</h3>

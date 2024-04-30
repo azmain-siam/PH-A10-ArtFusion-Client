@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/Logo.png";
 
 const Footer = () => {
@@ -5,25 +6,25 @@ const Footer = () => {
     <footer className="py-10 px-4 md:px-0 pb-0 text-base-content bg-[#ebebeb]">
       <div className="max-w-7xl w-[95%] md:w-[93%] mx-auto">
         <div className="footer">
-          <aside className="flex md:w-auto items-center gap-1">
+          <aside className="flex md:w-auto items-center gap-3">
             <img src={logo} className="w-[70px] md:w-24" alt="" />
             <div>
-              <h3 className="text-lg md:text-2xl font-bold">
-                ArtFusion Properties.
-              </h3>
+              <h3 className="text-lg md:text-2xl font-bold">ArtFusion.</h3>
             </div>
           </aside>
 
           <nav>
             <h6 className="footer-title text-lg text-black">Services</h6>
-            <a className="link link-hover">Real Estate</a>
-            <a className="link link-hover">Residential</a>
-            <a className="link link-hover">Construction</a>
+            <a className="link link-hover">Customer Support</a>
+            <a className="link link-hover">Shipping and Returns</a>
+            <a className="link link-hover">Gift Cards</a>
           </nav>
           <nav>
             <h6 className="footer-title text-lg text-black">Company</h6>
             <a className="link link-hover">About us</a>
-            <a className="link link-hover">Contact</a>
+            <Link to={"/contact"} className="link link-hover">
+              Contact
+            </Link>
             <a className="link link-hover">Jobs</a>
           </nav>
           <nav>

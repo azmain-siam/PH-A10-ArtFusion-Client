@@ -17,7 +17,7 @@ const Error = () => {
           changed or is temporarily unavailable.
         </p>
         <Link to={"/"}>
-          <button className="bg-[#0145D4] shadow shadow-slate-500 text-sm hover:scale-105 duration-200 uppercase font-semibold px-5 py-2 rounded-full text-white">
+          <button className="bg-[#E56997] shadow shadow-slate-500 text-sm hover:scale-105 duration-200 uppercase font-semibold px-5 py-2 rounded-full text-white">
             Go to homepage
           </button>
         </Link>

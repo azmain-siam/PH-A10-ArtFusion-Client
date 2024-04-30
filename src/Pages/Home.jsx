@@ -4,6 +4,7 @@ import Feature from "../Components/Feature";
 import Crafts from "../Components/Crafts";
 import ArtAndCraft from "../Components/ArtAndCraft";
 import { useLoaderData } from "react-router-dom";
+import About from "../Components/About";
 const Home = () => {
   const categories = useLoaderData();
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Crafts />
       <ArtAndCraft categories={categories} />
       <Feature />
+      <About />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
-import { useLoaderData } from "react-router-dom";
+import { BiSolidPhoneCall } from "react-icons/bi";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Details = () => {
   const item = useLoaderData();
@@ -65,6 +66,19 @@ const Details = () => {
                 Stock Status: Made to order
               </h3>
             </div>
+          </div>
+          <div className="mt-8 flex items-center gap-2">
+            <BiSolidPhoneCall size={36} />
+            <h3 className="font-semibold text-lg md:text-xl lg:text-2xl">
+              Want to Buy?
+              <Link
+                to={"/contact"}
+                className="underline font-bold italic underline-offset-[5px] text-[#E56997]"
+              >
+                {" "}
+                Contact With Us!
+              </Link>
+            </h3>
           </div>
         </div>
       </div>
