@@ -41,16 +41,16 @@ const MyCrafts = () => {
   };
 
   return (
-    <div className="my-5 max-w-7xl w-[95%] md:w-[93%] mx-auto mt-9 min-h-full">
+    <div className="my-5 max-w-7xl w-[95%] md:w-[93%] mx-auto  min-h-full">
       <Helmet>
         <title>My Crafts | ArtFusion</title>
       </Helmet>
-      <div className="flex justify-center items-center h-full">
+      <div className="flex justify-center items-center h-full mb-10">
         {loading ? (
           <Bars
             height="80"
             width="80"
-            color="#4fa94d"
+            color="#E56997"
             ariaLabel="bars-loading"
             wrapperStyle={{}}
             wrapperClass=""

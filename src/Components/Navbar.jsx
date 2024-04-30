@@ -73,14 +73,24 @@ const Navbar = () => {
                 <NavLink to={"/contact"}>Contact Us</NavLink>
               </li>
               <li>
-                <NavLink>All Art & craft Items</NavLink>
+                <NavLink to={"/all"}>All Art & craft Items</NavLink>
               </li>
-              <li>
-                <NavLink>Add Craft Item</NavLink>
-              </li>
-              <li>
-                <NavLink>My Art&Craft List</NavLink>
-              </li>
+              {user ? (
+                <>
+                  {/* <li className="hover:bg-none">
+                  <NavLink to={"/contact"}>Contact Us</NavLink>
+                </li> */}
+
+                  <li>
+                    <NavLink to={"/add"}>Add Craft Item</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to={"/my_list"}>My Art & Craft List</NavLink>
+                  </li>
+                </>
+              ) : (
+                ""
+              )}
             </ul>
           </div>
           <Link
