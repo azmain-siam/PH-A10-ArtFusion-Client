@@ -1,3 +1,5 @@
+import { FaStar } from "react-icons/fa";
+import { IoCartOutline, IoTimerOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -62,12 +64,32 @@ const CraftCard = ({ item, refresh, setRefresh }) => {
           <h2 className="card-title font-bold capitalize">{itemName}</h2>
 
           <p className="font-medium text-[#585858]">{description}</p>
-          <h3 className="font-semibold mt-3 text-lg">
-            Customization: {customization}
-          </h3>
-
+          <h3 className="font-semibold text-lg">Category: {category}</h3>
           <hr className="my-1" />
-
+          <div className="text-[15px] flex gap-1 justify-between flex-wrap">
+            <div className="flex gap-1 items-center">
+              <IoCartOutline size={19} color="#0047AB" />
+              <p className="font-medium mt-[2px]">
+                {stockStatus}
+              </p>
+            </div>
+            <div className="flex gap-1 items-center">
+              <FaStar size={19} color="#ffa534" />
+              <p className="font-medium mt-[2px]">Rating: {rating}</p>
+            </div>
+            <div className="flex gap-1 items-center">
+              <IoTimerOutline size={19} color="#0047AB" />
+              <p className="font-medium mt-[2px]">
+                Proccessing Time: {processing_time}
+              </p>
+            </div>
+          </div>
+          <hr className="my-1" />
+          <div className="flex items-center justify-between">
+            <h3 className="font-semibold">Customization: {customization}</h3>
+            <h3 className="font-bold text-4xl">${price}.00</h3>
+          </div>
+          <hr className="my-1" />
           <div className="flex gap-2 mt-1">
             <Link to={`/items/update/${_id}`} className="flex-1">
               <button className="btn w-full bg-[#E56997] border-[#E56997] hover:border-[#28282B] hover:text-[#28282B] text-white uppercase transition-all hover:bg-white duration-300 hover:scale-105">
