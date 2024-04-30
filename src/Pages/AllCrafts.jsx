@@ -33,7 +33,7 @@ const AllCrafts = () => {
             {items.map((item) => (
               <tr className="font-semibold border-[#e4e4e4]" key={item._id}>
                 <td>
-                  <img className="w-16 rounded-md ml-2" src={item.photoURL} />
+                  <img className="w-16 h-12 object-cover rounded-md ml-2" src={item.photoURL} />
                 </td>
                 <td>{item.itemName}</td>
                 <td>{item.email}</td>
