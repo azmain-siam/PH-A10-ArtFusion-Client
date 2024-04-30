@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import toast from "react-hot-toast";
+import { Tooltip } from "react-tooltip";
 const Navbar = () => {
   const { user, logout } = useAuth();
 
@@ -13,6 +14,7 @@ const Navbar = () => {
 
   return (
     <div className="shadow-md">
+      <Tooltip id="my-tooltip" />
       <div className="navbar max-w-7xl w-[95%] md:w-[93%] mx-auto md:h-[80px] ">
         <div className="navbar-start gap-0">
           <div className="dropdown">
@@ -99,7 +101,9 @@ const Navbar = () => {
         <div className="navbar-end gap-1 md:gap-3">
           {user ? (
             <div
-              data-tip={user.displayName}
+              data-tooltip-id="my-tooltip"
+              data-tooltip-content={user.displayName}
+              data-tooltip-place="left"
               className="dropdown dropdown-end tooltip tooltip-left"
             >
               <div

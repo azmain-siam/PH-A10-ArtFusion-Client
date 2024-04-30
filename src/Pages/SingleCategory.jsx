@@ -1,12 +1,12 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const SingleCategory = () => {
   const items = useLoaderData();
-
+  const category = useParams();
   return (
     <div>
       <div className="text-center mb-10 md:mb-14">
-        <h3 className="text-2xl md:text-4xl font-bold mb-3">Category: {}</h3>
+        <h3 className="text-2xl md:text-4xl font-bold mb-3">Category: {category.category}</h3>
       </div>
       {items.map((item) => (
         <div

@@ -76,7 +76,7 @@ const MyCrafts = () => {
         </div>
       ) : (
         <div className="text-2xl text-center mb-48 font-medium">
-          List is empty. Please add items!
+          You didn't added any items. Please add items!
         </div>
       )}
     </div>

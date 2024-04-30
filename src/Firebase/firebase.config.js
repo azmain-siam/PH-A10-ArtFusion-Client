@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA3KtFvQyV41-aC-GR178CPWMAAgC9EZ34",
-  authDomain: "a10-art-fusion.firebaseapp.com",
-  projectId: "a10-art-fusion",
-  storageBucket: "a10-art-fusion.appspot.com",
-  messagingSenderId: "973212012939",
-  appId: "1:973212012939:web:9367732a8b394ac59b1f8e",
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase
