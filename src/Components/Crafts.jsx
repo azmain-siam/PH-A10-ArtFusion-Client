@@ -13,7 +13,7 @@ const Crafts = () => {
   }, []);
   console.log(items);
 
-  const displayedItems = items.slice(0, 8);
+  const displayedItems = items.slice(0, 9);
   return (
     <div
       data-aos="fade-up"
@@ -83,6 +83,13 @@ const Crafts = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="text-center my-10">
+        <Link to={`/all`}>
+          <button className="btn px-10 text-lg bg-[#E56997] border-[#E56997] hover:border-[#28282B] hover:text-[#28282B] text-white uppercase transition-all hover:bg-white duration-300 hover:scale-105">
+            show all items
+          </button>
+        </Link>
       </div>
     </div>
   );
