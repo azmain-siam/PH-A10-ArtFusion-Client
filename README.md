@@ -2,7 +2,7 @@
 
 Welcome to ArtFusion, your online destination for exquisite art and crafts, featuring a diverse range of paintings, drawings, and other creative works. Explore the vibrant world of art through our curated collection.
 
-## Selected Category: Painting and Drawing
+**Live Site**: https://a10-art-fusion.web.app
 
 ## Features and Characteristics of this website:
 
@@ -19,4 +19,24 @@ Thank you for visiting **ArtFusion**! We hope you enjoy exploring our website an
 - **React Tooltip**
 - **React Simple Typewriter**
 
-**Live Site**: https://a10-art-fusion.web.app
+
+## Running the Project
+
+To run the **ArtFusion** project locally by cloning from the GitHub repository, follow these steps:
+
+1. **Clone the Repository**
+
+   ```terminal
+   git clone https://github.com/azmain-siam/PH-A10-ArtFusion-Client.git
+2. **Navigate to the Project Directory**
+
+   ```terminal
+   cd PH-A10-ArtFusion-Client
+3. **Install Dependencies**
+
+   ```terminal
+   npm install
+4. **Run the server**
+
+   ```terminal
+   npm run dev
