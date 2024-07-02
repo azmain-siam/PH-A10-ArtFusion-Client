@@ -14,6 +14,12 @@ Welcome to ArtFusion, your online destination for exquisite art and crafts, feat
 
 Thank you for visiting **ArtFusion**! We hope you enjoy exploring our website and discovering the beauty of art.
 
+## Technologies used in this project
+1. **React**
+2. **Tailwind CSS**
+3. **Daisy UI**
+4. **Firebase**
+
 ## npm packages which used in this website:
 
 - **React Tooltip**
